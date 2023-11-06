@@ -49,7 +49,7 @@ Users should be able to:
 How to write media queries for min and max width at the same time.
 How to hide an element by setting its max-height to 0 and overflow property to hidden.
 How to make an element re-display by re-setting its max-height to a desired value greater than 0.
-How to changed styles on an element when an different element (input) is checked using .accordion**item input:checked ~ .accordion**content.
+How to change styles on an element when an different element (input) is checked using .accordion**item input:checked ~ .accordion**content.
 Used the + and ~ css selectors. "h1 + p" will only select only THE FIRST p that is immediately preceded by a h1. "h1 ~ p" will select ALL the p siblings preceded by a h1.
 
 ```css
