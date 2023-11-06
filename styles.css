@@ -82,7 +82,7 @@ main {
   align-items: center;
   cursor: pointer;
   margin-bottom: 1.5em;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .accordion__header:hover {
@@ -98,7 +98,7 @@ main {
   max-height: 0;
   overflow: hidden;
   line-height: 1.7;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .accordion__content p {
@@ -122,7 +122,7 @@ hr {
 }
 
 .accordion__item input:checked ~ .accordion__header img {
-  transition: 0.3s;
+  transition: 0.4s;
   transform: rotate(180deg);
 }
 
