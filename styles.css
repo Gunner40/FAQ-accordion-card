@@ -85,7 +85,8 @@ main {
   transition: color 0.4s ease-in-out;
 }
 
-.accordion__header:active {
+.accordion__header:active,
+.accordion__header:hover {
   color: var(--text-soft-red);
 }
 
