@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* resets  */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* custom variables  */
+:root {
+  --text-dark-blue: hsl(238, 29%, 16%);
+  --text-soft-red: hsl(14, 88%, 65%);
+  --text-very-dark-greyish-blue: hsl(237, 12%, 33%);
+  --dark-greyish-blue: hsl(240, 6%, 50%);
+  --dividers-light-grayish-blue: hsl(240, 5%, 91%);
+  --gradient-color-1: hsl(273, 75%, 66%);
+  --gradient-color-2: hsl(240, 73%, 65%);
+}
+
+/* basic font styles  */
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-very-dark-greyish-blue);
+}
+
+/* main element styles, to center the card on the screen  */
+main {
+  background: linear-gradient(var(--gradient-color-1), var(--gradient-color-2));
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* overall card styles  */
+.card {
+  background-color: #fff;
+  padding: 0 2em 4em;
+  margin-inline: 2em;
+  border-radius: 2em;
+}
+
+/* image styles  */
+
+.card__images {
+  width: 220px;
+  margin-top: -100px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.card__image-shadow {
+  width: 220px;
+  margin-top: -70px;
+}
+
+.card__image-box {
+  display: none;
+}
+
+.card__heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1em;
+}
+
+/* accordion styles  */
+.accordion__item {
+  list-style: none;
+  margin-block: 1.5em;
+}
+
+.accordion__header {
+  /* move arrow to the right  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1.5em;
+  transition: color 0.2s ease-in-out;
+}
+
+.accordion__header:hover {
+  color: var(--text-soft-red);
+}
+
+.accordion__item input {
+  /* we dont want to see the checkbox but we need its functionality  */
+  display: none;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  line-height: 1.7;
+  transition: 0.3s;
+}
+
+.accordion__content p {
+  margin-bottom: 1em;
+  max-width: 95%;
+}
+
+hr {
+  color: var(--dividers-light-grayish-blue);
+  opacity: 0.5;
+}
+
+/* accordion functionality styles */
+
+.accordion__item input:checked ~ .accordion__content {
+  max-height: 200px;
+}
+
+.accordion__item input:checked + .accordion__header {
+  font-weight: bold;
+}
+
+.accordion__item input:checked ~ .accordion__header img {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+/* responsive styles  */
+
+/* decrease the size of the images and reposition them for really small screens  */
+
+@media screen and (max-width: 350px) {
+  .card__images {
+    width: 160px;
+    margin-top: -70px;
+  }
+  .card__image-shadow {
+    width: 160px;
+    margin-top: -50px;
+  }
+}
+
+/* increase the size of the images and reposition them for medium sized screens  */
+
+@media only screen and (min-width: 650px) and (max-width: 1200px) {
+  .card {
+    max-width: 600px;
+  }
+
+  .card__images {
+    width: 340px;
+    margin-top: -154px;
+  }
+
+  .card__image-shadow {
+    width: 340px;
+    margin-top: -105px;
+  }
+}
+
+/* reposition the card elements to be side by side using display flex. The image will change to the desktop version using the 'picture' html element. The image box will change from display none to display block and is positioned correctly using absolute positioning. The shadow image is changed to a background image and is positioned as per design. */
+
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 100%;
+    width: 950px;
+    display: flex;
+    padding: 0;
+    position: relative;
+  }
+  .card > * {
+    flex-basis: 50%;
+  }
+
+  .card__images {
+    margin-top: 0;
+    overflow: hidden;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: -575px;
+    background-position-y: -300px;
+    padding: 6em 0;
+  }
+
+  .card__image {
+    position: relative;
+    left: -80px;
+    width: 30%;
+  }
+
+  .card__image-shadow {
+    display: none;
+  }
+
+  .card__content {
+    padding-right: 100px;
+    padding-top: 2em;
+  }
+
+  .card__heading {
+    margin-left: 0;
+    margin-bottom: 1em;
+    text-align: left;
+  }
+
+  .card__image-box {
+    display: block;
+    position: absolute;
+    top: 195px;
+    left: -93px;
+  }
+}

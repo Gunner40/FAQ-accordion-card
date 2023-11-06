@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="card__images">
+          <picture class="card__image">
+            <source
+              media="(min-width: 1200px)"
+              srcset="./images/illustration-woman-online-desktop.svg"
+            />
+            <img
+              src="./images/illustration-woman-online-mobile.svg"
+              alt="woman online"
+            />
+          </picture>
+          <img
+            src="./images/bg-pattern-mobile.svg"
+            alt="woman online"
+            class="card__image-shadow"
+          />
+        </div>
+        <img
+          src="./images/illustration-box-desktop.svg"
+          alt="illustration box"
+          class="card__image-box"
+        />
+
+        <!-- Card content including the Accordion  -->
+        <div class="card__content">
+          <h1 class="card__heading">FAQ</h1>
+          <ul class="accordion">
+            <li class="accordion__item">
+              <input type="checkbox" name="accordion" id="first" />
+              <label for="first" class="accordion__header">
+                How many team members can I invite?<img
+                  src="./images/icon-arrow-down.svg"
+                  alt="expand faq arrow"
+                />
+              </label>
+              <div class="accordion__content">
+                <p>
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </div>
+              <hr />
+            </li>
+            <li class="accordion__item">
+              <input type="checkbox" name="accordion" id="second" />
+              <label for="second" class="accordion__header">
+                What is the maximum file upload size?<img
+                  src="./images/icon-arrow-down.svg"
+                  alt="expand faq arrow"
+                />
+              </label>
+              <div class="accordion__content">
+                <p>
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </div>
+              <hr />
+            </li>
+            <li class="accordion__item">
+              <input type="checkbox" name="accordion" id="third" />
+              <label for="third" class="accordion__header">
+                How do I reset my password?<img
+                  src="./images/icon-arrow-down.svg"
+                  alt="expand faq arrow"
+                />
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </div>
+              <hr />
+            </li>
+            <li class="accordion__item">
+              <input type="checkbox" name="accordion" id="fourth" />
+              <label for="fourth" class="accordion__header">
+                Can I cancel my subscription?<img
+                  src="./images/icon-arrow-down.svg"
+                  alt="expand faq arrow"
+                />
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </div>
+              <hr />
+            </li>
+            <li class="accordion__item">
+              <input type="checkbox" name="accordion" id="fifth" />
+              <label for="fifth" class="accordion__header">
+                Do you provide additional support?
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt="expand faq arrow"
+                />
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </div>
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
